@@ -11,9 +11,9 @@ jobs:
     - uses: actions/checkout@v2.4.0
       with:
         repository: 'punitcse/test-action-ruby'
-        ref: 'v0.0.1'
+        ref: 'v0.0.2'
     - uses: ruby/setup-ruby@v1
       with:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: test-hello-ruby
-      uses: punitcse/test-action-ruby@v0.0.1
+      uses: punitcse/test-action-ruby@v0.0.2

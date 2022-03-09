@@ -1,14 +1,12 @@
 name: "test-hello-ruby"
 description: "some test description"
 author: "jainpunit786@gmail.comk"
+branding:
+  icon: code
+  color: red
 runs:
   using: 'composite'
   steps:
-    -
-      run: |
+    - run: |
         bundle exec ruby run.rb
-    shell: bash
- shell: bash
- branding:
- icon: filter
- color: red
+      shell: bash

@@ -1,0 +1,19 @@
+name: 'print hello'
+on: 
+  workflow_dispatch:
+ permissions:
+     contents: read
+     statuses: write # change according to permissions your workflow need for more info https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#permissions
+   jobs:
+     build:
+       runs-on: ubuntu-20.04
+       steps:
+        - uses: actions/checkout@v2.4.0
+          with:
+            repository: 'punitcse/test-action-ruby'
+            ref: 'v0.0.1'
+        - uses: ruby/setup-ruby@v1
+          with:
+            bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+         - name: test-hello-ruby
+           uses: punitcse/test-action-ruby@v0.0.1
